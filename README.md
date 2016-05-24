@@ -22,7 +22,7 @@ $ echo "25:61" | ./go run
 INVALID INPUT
 ```
 
-## Trigonometry
+## Explanation
 
 The solution relies on two equations:
 
