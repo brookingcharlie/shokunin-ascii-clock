@@ -22,6 +22,57 @@ $ echo "25:61" | ./go run
 INVALID INPUT
 ```
 
+## Trigonometry
+
+The solution relies on two equations:
+
+x(hour) = -5 cos((2 pi / 12) hour) + 5
+
+![plot of x(hour)](plot-x.png)
+
+y(hour) = 8 sin(((2 pi / 12) hour) + 8
+
+![plot of y(hour)](plot-y.png)
+
+(To view the gnuplot scripts for the graphs above, see <plot.sh>, <plot-x.gp>, and <plot-y.gp>).
+
+These equations make sense given that the clock a horizontal radius of 8 and a
+vertical radius of 5. We can see this by looking at the clockface's position and
+plotting the X and Y coordinates at each position:
+
+{{{
+        o
+    o       o
+
+ o             o
+
+o               o
+
+ o             o
+
+    o       o
+        o
+}}}
+
+Coordinates for each position on clockface:
+
+```
+hour  x  y
+---- -- --
+   0  0  8
+   1  1 12
+   2  3 15
+   3  5 16
+   4  7 15
+   5  9 12
+   6 10  8
+   7  9  4
+   8  7  1
+   9  5  0
+  10  3  1
+  11  1  4
+```
+
 ## The Challenge
 
 In this challenge you must draw an analogue clock face.
