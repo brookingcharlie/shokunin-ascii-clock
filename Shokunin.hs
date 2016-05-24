@@ -15,7 +15,7 @@ clockLines time = lines
     lines = map line [0..10]
     line y = concat(map (\x -> symbol x y) [0..16])
     symbol x y = maybe " "
-      (\i -> if i == ((todHour time) `mod` 12) then "h" else "o")
+      (\i -> if i == ((todHour time) `mod` 12) then "x" else "o")
       (elemIndex (x, y) clockPositions)
 
 outputLines line = case (validate . parse) line of
