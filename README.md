@@ -57,11 +57,7 @@ o               o
 
     o       o
         o
-```
 
-Coordinates for each position on clockface:
-
-```
 hour  x  y
 ---- -- --
    0  0  8
