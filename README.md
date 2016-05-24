@@ -8,7 +8,7 @@ A trigonometry-based implementation using Haskell.
 
 Use the supplied `go` script to run the solution as follows:
 
-{{{
+```
 $ ./go build
 Usage: ./go run|test
 
@@ -20,7 +20,7 @@ SUCCESS: "10" -> ["INVALID INPUT"]
 
 $ echo "25:61" | ./go run
 INVALID INPUT
-}}}
+```
 
 ## The Challenge
 
@@ -41,7 +41,7 @@ Examples:
 
 21:35
 
-{{{
+```
         o
     o       o
 
@@ -53,11 +53,11 @@ h               o
 
     m       o
         o
-}}}
+```
 
 04:59
 
-{{{
+```
         o
     m       o
 
@@ -69,7 +69,7 @@ o               o
 
     o       o
         o
-}}}
+```
 
 ## To Win
 
