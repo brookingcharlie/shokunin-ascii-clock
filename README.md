@@ -81,16 +81,3 @@ We will be looking for:
 * A readme
 * With extra credit for:
 * Submitting a solution as a pair
-
-## End Date
-
-Monday 30th May
-
-## To Submit
-
-Feel free to paste a link to your solution github repo into the code challenge
-email thread or email one of the Software Shokunin Community directly with a link.  
-
-If you don’t want to post code publicly we still encourage you to give the
-challenge a go! Use the problem to exercise your skills, take your brain for a
-jog and work those typing muscles!!
