@@ -25,19 +25,6 @@ main = do
   testInvalid "00:aa"
   testInvalid "24:01"
   testInvalid "99:01"
-  test "00:00" [
-      "        h        ",
-      "    o       o    ",
-      "                 ",
-      " o             o ",
-      "                 ",
-      "o               o",
-      "                 ",
-      " o             o ",
-      "                 ",
-      "    o       o    ",
-      "        o        "
-    ]
   test "21:35" [
       "        o        ",
       "    o       o    ",
@@ -60,6 +47,19 @@ main = do
       "o               o",
       "                 ",
       " o             h ",
+      "                 ",
+      "    o       o    ",
+      "        o        "
+    ]
+  test "00:00" [
+      "        h        ",
+      "    o       o    ",
+      "                 ",
+      " o             o ",
+      "                 ",
+      "o               o",
+      "                 ",
+      " o             o ",
       "                 ",
       "    o       o    ",
       "        o        "
