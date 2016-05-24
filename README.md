@@ -41,9 +41,9 @@ y(hour) = 8 sin(((2 pi / 12) hour) + 8
 (To view the gnuplot scripts for the graphs above,
 see [plot-x.gp](plot-x.gp) and [plot-y.gp](plot-y.gp).)
 
-These equations make sense given that the clock a horizontal radius of 8 and a
-vertical radius of 5. We can see this by looking at the clockface's position and
-plotting the X and Y coordinates at each position:
+These equations make sense given that the clock has a horizontal radius of 8 and
+a vertical radius of 5. We can see this by looking at the clockface's position
+and plotting the X and Y coordinates at each point:
 
 ```
         o
