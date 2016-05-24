@@ -3,8 +3,13 @@ import Shokunin
 test line expected =
   let actual = outputLines line in
   if actual == expected
-  then putStrLn $ "SUCCESS: " ++ show line ++ " -> " ++ show actual
-  else putStrLn $ "FAILURE: " ++ show line ++ " -> " ++ show actual ++ " /= " ++ show expected
+  then putStrLn $ "SUCCESS: " ++ show line
+  else do
+    putStrLn $ "FAILURE: " ++ show line
+    putStrLn "Expected:"
+    mapM_ putStrLn expected
+    putStrLn "Actual:"
+    mapM_ putStrLn actual
 
 testInvalid line = test line ["INVALID INPUT"]
 
@@ -20,4 +25,16 @@ main = do
   testInvalid "00:aa"
   testInvalid "24:01"
   testInvalid "99:01"
-  test "00:59" ["0", "59"]
+  test "00:00" [
+      "        h        ",
+      "    o       o    ",
+      "                 ",
+      " o             o ",
+      "                 ",
+      "o               o",
+      "                 ",
+      " o             o ",
+      "                 ",
+      "    o       o    ",
+      "        o        "
+    ]
