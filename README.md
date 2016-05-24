@@ -26,11 +26,15 @@ INVALID INPUT
 
 The solution relies on two equations:
 
+```
 x(hour) = -5 cos((2 pi / 12) hour) + 5
+```
 
 ![plot of x(hour)](plot-x.png)
 
+```
 y(hour) = 8 sin(((2 pi / 12) hour) + 8
+```
 
 ![plot of y(hour)](plot-y.png)
 
