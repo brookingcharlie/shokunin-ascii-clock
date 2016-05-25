@@ -6,10 +6,8 @@ test line expected =
   then putStrLn $ "SUCCESS: " ++ show line
   else do
     putStrLn $ "FAILURE: " ++ show line
-    putStrLn "Expected:"
-    mapM_ putStrLn expected
-    putStrLn "Actual:"
-    mapM_ putStrLn actual
+    mapM_ putStrLn $ "Expected:" : expected
+    mapM_ putStrLn $ "Actual:" : actual
 
 testInvalid line = test line ["INVALID INPUT"]
 
