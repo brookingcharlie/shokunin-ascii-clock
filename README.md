@@ -1,6 +1,7 @@
 # ASCII Clock
 
-A Haskell solution for the *ASCII Clock* programming challenge.
+A Haskell solution for the *ASCII Clock* programming challenge
+using fitted trigonometric functions.
 
 Charlie Brooking (@brookingcharlie)
 
@@ -43,7 +44,7 @@ mark on the clock (parameter *i*), these functions calculate the character
 position as X and Y coordinates (i.e. line and column) starting from the
 top-left of stdout.
 
-These plots show points on the clock at the fitted curve:
+These plots show points on the clockface and the fitted curve:
 
 ```
 x(hour) = 8 sin(((2 pi / 12) hour) + 8
@@ -62,8 +63,8 @@ see [fit-x.gp](fit-x.gp), [fit-y.gp](fit-y.gp), and [fit.sh](fit.sh).)
 
 These equations make sense given that the clock has a horizontal radius of 8 and
 a vertical radius of about 5, is centred around (8, 5), and has a period of 12.
-Really the only interesting this is the scaling factor of -4.644 as opposed to 5;
-it turns out that using exactly 5 gives you wonky looking clock! So maybe using
+Really the only interesting this is the scaling factor of -4.644 as opposed to 5:
+it turns out that using exactly 5 gives you a wonky looking clock! So maybe using
 gnuplot was useful afterall.
 
 For reference, here's the table of coordinates for the clockface:
