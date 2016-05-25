@@ -42,6 +42,12 @@ The provided `go` script runs the app using [GHC](https://www.haskell.org/ghc/).
 You can install this on a Mac using `brew install ghc`. For non-Mac systems,
 follow instructions on its website.
 
+## Generalised script
+
+See [ShokuninGeneralised.hs](ShokuninGeneralised.hs) for a generalised script
+that draws clockfaces of various dimensions according to horizontal/vertical
+radius and scaling parameters.
+
 ## Explanation of trigonometry
 
 As a completely unnecessary stunt, the solution relies on two trigonometric
