@@ -25,6 +25,8 @@ main = do
   testInvalid "00:aa"
   testInvalid "24:01"
   testInvalid "99:01"
+  testInvalid "-01:23"
+  testInvalid "01:-23"
   test "00:00" [
       "        x        ",
       "    o       o    ",
