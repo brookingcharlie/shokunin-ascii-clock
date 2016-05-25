@@ -56,16 +56,16 @@ These plots show points on the clockface and the fitted curve:
 x(hour) = 8 sin(((2 pi / 12) hour) + 8
 ```
 
-![plot of x(hour)](fit-x.png)
+![plot of x(hour)](plots/fit-x.png)
 
 ```
 y(hour) = -4.644 cos((2 pi / 12) hour) + 5
 ```
 
-![plot of y(hour)](fit-y.png)
+![plot of y(hour)](plots/fit-y.png)
 
 (To view the gnuplot scripts used to fit functions and draw the graphs above,
-see [fit-x.gp](fit-x.gp), [fit-y.gp](fit-y.gp), and [fit.sh](fit.sh).)
+see [plots/](plots/).)
 
 These equations make sense given that the clock has a horizontal radius of 8 and
 a vertical radius of about 5, is centred around (8, 5), and has a period of 12.
