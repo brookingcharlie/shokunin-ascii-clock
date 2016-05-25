@@ -36,6 +36,12 @@ m               o
         o        
 ```
 
+## Dependencies
+
+The provided `go` script runs the app using [GHC](https://www.haskell.org/ghc/).
+You can install this on a Mac using `brew install ghc`. For non-Mac systems,
+follow instructions on its website.
+
 ## Explanation of trigonometry
 
 As a completely unnecessary stunt, the solution relies on two trigonometric
