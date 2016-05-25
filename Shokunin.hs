@@ -12,11 +12,11 @@ x i = round(8 * sin((2 * pi / 12) * i) + 8)
 y i = round(-4.644 * cos((2 * pi / 12) * i) + 5)
 markCoordinates = [(x(i), y(i)) | i <- [0..11]]
 
-markSymbol time i =
-  if matchesHour && matchesMin then "x"
-  else if matchesHour then "h"
-  else if matchesMin then "m"
-  else "o"
+markSymbol time i = case [matchesHour, matchesMin] of
+  [True, True] -> "x"
+  [True, False] -> "h"
+  [False, True] -> "m"
+  otherwise -> "o"
   where
     matchesHour = i == (todHour time) `mod` 12
     matchesMin = i == ((todMin time) `div` 5) `mod` 12
