@@ -1,30 +1,49 @@
 # ASCII Clock
 
+A Haskell solution for the *ASCII Clock* programming challenge.
+
 Charlie Brooking (@brookingcharlie)
 
-## Implementation
-
-A trigonometry-based implementation using Haskell.
+## Running the solution
 
 Use the supplied `go` script to run the solution as follows:
 
 ```
-$ ./go build
+$ ./go
 Usage: ./go run|test
 
 $ ./go test
-SUCCESS: "" -> ["INVALID INPUT"]
-SUCCESS: "A" -> ["INVALID INPUT"]
-SUCCESS: "10" -> ["INVALID INPUT"]
+SUCCESS: ""
+SUCCESS: "2:"
+SUCCESS: "0:59"
 ...
 
 $ echo "25:61" | ./go run
 INVALID INPUT
+
+$ echo "23:47" | ./go run
+        o        
+    h       o    
+                 
+ o             o 
+                 
+m               o
+                 
+ o             o 
+                 
+    o       o    
+        o        
 ```
 
-## Explanation
+## Explanation of trigonometry
 
-The solution relies on two equations:
+As a completely unnecessary stunt, the solution relies on two trigonometric
+functions that were fit using [gnuplot](http://www.gnuplot.info). For each hour
+mark on the clock (parameter *i*), these functions calculate the character
+position as X and Y coordinates (i.e. line and column) starting from the
+top-left of stdout.
+
+These plots show points on the clock at the fitted curve:
 
 ```
 x(hour) = 8 sin(((2 pi / 12) hour) + 8
@@ -39,39 +58,31 @@ y(hour) = -4.644 cos((2 pi / 12) hour) + 5
 ![plot of y(hour)](fit-y.png)
 
 (To view the gnuplot scripts used to fit functions and draw the graphs above,
-see [fit-x.gp](fit-x.gp) and [fit-y.gp](fit-y.gp).)
+see [fit-x.gp](fit-x.gp), [fit-y.gp](fit-y.gp), and [fit.sh](fit.sh).)
 
 These equations make sense given that the clock has a horizontal radius of 8 and
-a vertical radius of about 5. We can see this by looking at the clockface's
-position and plotting the X and Y coordinates at each point:
+a vertical radius of about 5, is centred around (8, 5), and has a period of 12.
+Really the only interesting this is the scaling factor of -4.644 as opposed to 5;
+it turns out that using exactly 5 gives you wonky looking clock! So maybe using
+gnuplot was useful afterall.
+
+For reference, here's the table of coordinates for the clockface:
 
 ```
-        o
-    o       o
-
- o             o
-
-o               o
-
- o             o
-
-    o       o
-        o
-
-hour  x  y
----- -- --
-   0  0  8
-   1  1 12
-   2  3 15
-   3  5 16
-   4  7 15
-   5  9 12
-   6 10  8
-   7  9  4
-   8  7  1
-   9  5  0
-  10  3  1
-  11  1  4
+        o            hour  x  y
+    o       o        ---- -- --
+                        0  0  8
+ o             o        1  1 12
+                        2  3 15
+o               o       3  5 16
+                        4  7 15
+ o             o        5  9 12
+                        6 10  8
+    o       o           7  9  4
+        o               8  7  1
+                        9  5  0
+                       10  3  1
+                       11  1  4
 ```
 
 ## The Challenge
